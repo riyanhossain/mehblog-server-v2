@@ -2,10 +2,10 @@ const express = require('express');
 const router = express.Router();
 const blog = require('../Models/Schemas/blog');
 
-router.post('/blogs', async () => {
+router.post('/blogs', async (req , res) => {
     try {
-        const blog = new blog(req.body);
-        await blog.save();
+        const pblog = new blog(req.body);
+        await pblog.save();
         res.status(200).json({
             message: 'Blog added successfully',
         });
