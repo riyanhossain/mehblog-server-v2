@@ -25,6 +25,7 @@ router.get('/blogs', async (req, res) => {
         res.status(500).json({
             error : err.message
         });
+        res.end();
     }
 })
 
