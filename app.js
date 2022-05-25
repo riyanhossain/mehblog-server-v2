@@ -3,7 +3,7 @@ const connect = require('./dbConnect/dbConnect');
 const { notFound, errorHandler } = require('./Middleware/errorMiddleware');
 const blogRouter = require('./Routes/blogs');
 const categoryRouter = require('./Routes/categories');
-const others = require('./Routes/others');
+const othersRouter = require('./Routes/others');
 
 
 
@@ -18,7 +18,7 @@ connect();
 // Routes
 app.use('/api/v2/', blogRouter);
 app.use('/api/v2/', categoryRouter);
-app.use('/api/v2/', others)
+app.use('/api/v2/', othersRouter)
 
 // Server status
 app.get('/', (req, res) => {
