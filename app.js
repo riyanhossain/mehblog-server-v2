@@ -25,6 +25,13 @@ app.get('/', (req, res) => {
     res.send('server is running');
 })
 
+// hanlding bad requests
+app.get('*', (req, res) => {
+    res.status(404).json({
+        error: 'Page not found'
+    });
+})
+
 // Error handling
 app.use(notFound);
 app.use(errorHandler);
