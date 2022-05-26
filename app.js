@@ -4,6 +4,7 @@ const { notFound, errorHandler } = require('./Middleware/errorMiddleware');
 const blogRouter = require('./Routes/blogs');
 const categoryRouter = require('./Routes/categories');
 const othersRouter = require('./Routes/others');
+const cors = require('cors');
 
 
 
@@ -11,6 +12,9 @@ const app = express();
 
 //built-in middleware
 app.use(express.json());
+
+//external middleware
+app.use(cors());
 
 // dbConect middleware
 connect();
