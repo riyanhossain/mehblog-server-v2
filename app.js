@@ -16,9 +16,9 @@ app.use(express.json());
 connect();
 
 // Routes
-app.use('/', blogRouter);
-app.use('/', categoryRouter);
-app.use('/', othersRouter)
+app.use('/api/v2/', blogRouter);
+app.use('/api/v2/', categoryRouter);
+app.use('/api/v2/', othersRouter)
 
 // Server status
 app.get('/', (req, res) => {
