@@ -22,7 +22,7 @@ app.use('/', othersRouter)
 
 // Server status
 app.get('/', (req, res) => {
-    res.send('server is running');
+    res.send('Server is running');
 })
 
 // Error handling
